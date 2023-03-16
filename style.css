@@ -1,0 +1,67 @@
+body {
+  margin: 0 0 0 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+section {
+  margin: auto;
+  width: 30%;
+  min-width: min-content;
+  height: 80%;
+  border: 2px solid black;
+  transition: 0.5s;
+}
+@media screen and (orientation: portrait) {
+  section {
+    width: 80%;
+  }
+}
+
+form {
+  height: min-content;
+
+  display: grid;
+  grid-template-areas: "name comment" "date comment" "aComment aComment";
+}
+input[name="name"] {
+  grid-area: name;
+}
+.red::placeholder {
+  color: red;
+}
+input[name="date"] {
+  grid-area: date;
+}
+input[name="aComment"] {
+  grid-area: aComment;
+}
+
+button {
+  grid-area: comment;
+  cursor: pointer;
+}
+.comments__content {
+  width: 100%;
+  height: 90%;
+}
+.aComment {
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.2);
+}
+.trash {
+  height: 3 0px;
+  width: 30px;
+  background: url("https://cdn-icons-png.flaticon.com/512/2891/2891491.png")
+    center/contain no-repeat;
+}
+.like,
+.trash {
+  cursor: pointer;
+  color: red;
+}
